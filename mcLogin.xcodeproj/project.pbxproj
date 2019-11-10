@@ -119,9 +119,10 @@
 			children = (
 				76FA49BC2377E9150035D6E2 /* AppDelegate.swift */,
 				76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */,
-				76FA49F52377F4500035D6E2 /* Helpers */,
+				76FA49F9237802F20035D6E2 /* APIClient.swift */,
 				76FA49EE2377F3D00035D6E2 /* ViewControllers */,
 				7634EE8523781F1100ADD0F5 /* Model Files */,
+				76FA49F52377F4500035D6E2 /* Helpers */,
 				76FA49C22377E9150035D6E2 /* Main.storyboard */,
 				76FA49C52377E9190035D6E2 /* Assets.xcassets */,
 				76FA49C72377E9190035D6E2 /* LaunchScreen.storyboard */,
@@ -153,7 +154,6 @@
 			children = (
 				76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */,
 				76FA49C02377E9150035D6E2 /* DashboardViewController.swift */,
-				76FA49F9237802F20035D6E2 /* APIClient.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
