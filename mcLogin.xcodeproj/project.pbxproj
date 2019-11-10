@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		76FA49BD2377E9150035D6E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49BC2377E9150035D6E2 /* AppDelegate.swift */; };
 		76FA49BF2377E9150035D6E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */; };
-		76FA49C12377E9150035D6E2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49C02377E9150035D6E2 /* ViewController.swift */; };
+		76FA49C12377E9150035D6E2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49C02377E9150035D6E2 /* DashboardViewController.swift */; };
 		76FA49C42377E9150035D6E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FA49C22377E9150035D6E2 /* Main.storyboard */; };
 		76FA49C62377E9190035D6E2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76FA49C52377E9190035D6E2 /* Assets.xcassets */; };
 		76FA49C92377E9190035D6E2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76FA49C72377E9190035D6E2 /* LaunchScreen.storyboard */; };
 		76FA49D42377E9190035D6E2 /* mcLoginTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49D32377E9190035D6E2 /* mcLoginTests.swift */; };
 		76FA49DF2377E9190035D6E2 /* mcLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49DE2377E9190035D6E2 /* mcLoginUITests.swift */; };
+		76FA49ED2377F36F0035D6E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */; };
+		76FA49F22377F43F0035D6E2 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */; };
+		76FA49F42377F4470035D6E2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49F32377F4470035D6E2 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		76FA49B92377E9150035D6E2 /* mcLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mcLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FA49BC2377E9150035D6E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		76FA49C02377E9150035D6E2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		76FA49C02377E9150035D6E2 /* DashboardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		76FA49C32377E9150035D6E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		76FA49C52377E9190035D6E2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76FA49C82377E9190035D6E2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		76FA49DA2377E9190035D6E2 /* mcLoginUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mcLoginUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FA49DE2377E9190035D6E2 /* mcLoginUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mcLoginUITests.swift; sourceTree = "<group>"; };
 		76FA49E02377E9190035D6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		76FA49F32377F4470035D6E2 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +107,8 @@
 			children = (
 				76FA49BC2377E9150035D6E2 /* AppDelegate.swift */,
 				76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */,
-				76FA49C02377E9150035D6E2 /* ViewController.swift */,
+				76FA49F52377F4500035D6E2 /* Helpers */,
+				76FA49EE2377F3D00035D6E2 /* ViewControllers */,
 				76FA49C22377E9150035D6E2 /* Main.storyboard */,
 				76FA49C52377E9190035D6E2 /* Assets.xcassets */,
 				76FA49C72377E9190035D6E2 /* LaunchScreen.storyboard */,
@@ -126,6 +133,24 @@
 				76FA49E02377E9190035D6E2 /* Info.plist */,
 			);
 			path = mcLoginUITests;
+			sourceTree = "<group>";
+		};
+		76FA49EE2377F3D00035D6E2 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */,
+				76FA49C02377E9150035D6E2 /* DashboardViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		76FA49F52377F4500035D6E2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				76FA49F32377F4470035D6E2 /* Utility.swift */,
+				76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,8 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76FA49C12377E9150035D6E2 /* ViewController.swift in Sources */,
+				76FA49ED2377F36F0035D6E2 /* LoginViewController.swift in Sources */,
+				76FA49C12377E9150035D6E2 /* DashboardViewController.swift in Sources */,
+				76FA49F42377F4470035D6E2 /* Utility.swift in Sources */,
 				76FA49BD2377E9150035D6E2 /* AppDelegate.swift in Sources */,
+				76FA49F22377F43F0035D6E2 /* KeyboardLayoutConstraint.swift in Sources */,
 				76FA49BF2377E9150035D6E2 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
