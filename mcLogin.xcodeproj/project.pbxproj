@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7634EE8423781F0700ADD0F5 /* ResponseTokenData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7634EE8323781F0700ADD0F5 /* ResponseTokenData.swift */; };
 		76FA49BD2377E9150035D6E2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49BC2377E9150035D6E2 /* AppDelegate.swift */; };
 		76FA49BF2377E9150035D6E2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */; };
 		76FA49C12377E9150035D6E2 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49C02377E9150035D6E2 /* DashboardViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7634EE8323781F0700ADD0F5 /* ResponseTokenData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTokenData.swift; sourceTree = "<group>"; };
 		76FA49B92377E9150035D6E2 /* mcLogin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mcLogin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76FA49BC2377E9150035D6E2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7634EE8523781F1100ADD0F5 /* Model Files */ = {
+			isa = PBXGroup;
+			children = (
+				7634EE8323781F0700ADD0F5 /* ResponseTokenData.swift */,
+			);
+			path = "Model Files";
+			sourceTree = "<group>";
+		};
 		76FA49B02377E9150035D6E2 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +121,7 @@
 				76FA49BE2377E9150035D6E2 /* SceneDelegate.swift */,
 				76FA49F52377F4500035D6E2 /* Helpers */,
 				76FA49EE2377F3D00035D6E2 /* ViewControllers */,
+				7634EE8523781F1100ADD0F5 /* Model Files */,
 				76FA49C22377E9150035D6E2 /* Main.storyboard */,
 				76FA49C52377E9190035D6E2 /* Assets.xcassets */,
 				76FA49C72377E9190035D6E2 /* LaunchScreen.storyboard */,
@@ -291,6 +302,7 @@
 				76FA49ED2377F36F0035D6E2 /* LoginViewController.swift in Sources */,
 				76FA49FA237802F20035D6E2 /* APIClient.swift in Sources */,
 				76FA49C12377E9150035D6E2 /* DashboardViewController.swift in Sources */,
+				7634EE8423781F0700ADD0F5 /* ResponseTokenData.swift in Sources */,
 				76FA49BD2377E9150035D6E2 /* AppDelegate.swift in Sources */,
 				76FA49F22377F43F0035D6E2 /* KeyboardLayoutConstraint.swift in Sources */,
 				76FA49BF2377E9150035D6E2 /* SceneDelegate.swift in Sources */,
