@@ -20,9 +20,11 @@ class LoginViewController: UIViewController, APIClientDelegate {
     
     var token:String?
     let apiClient = APIClient()
+    @IBOutlet weak var loaderView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideLoader()
         setupHideKeyboardOnTap()
         apiClient.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
@@ -30,7 +32,6 @@ class LoginViewController: UIViewController, APIClientDelegate {
         self.baseView.frame = CGRect(x: UIScreen.main.bounds.width - self.baseView.bounds.width , y: self.view.frame.size.height/3.2, width: self.baseView.frame.size.width, height: self.baseView.frame.size.height) 
         UIView.animate(withDuration: 0.5, delay: 1, options: .curveEaseIn, animations: {
             self.baseView.frame = CGRect(x: UIScreen.main.bounds.width - self.baseView.bounds.width, y:  UIScreen.main.bounds.height - self.view.frame.size.height, width: self.baseView.frame.size.width, height: self.baseView.frame.size.height)
-            
         }) { (finished) in
             //Displaying Login buttons
             UIView.animate(withDuration: 0.5, animations: {
@@ -41,19 +42,41 @@ class LoginViewController: UIViewController, APIClientDelegate {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.checkIfLoggedIn()
         hideNavigationBar()
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        hideNavigationBar()
+        showNavigationBar()
     }
     @IBAction func loginAction(_ sender: Any) {
         guard let ei = emailInput.text, let pw = passwordInput.text else {return}
-        apiClient.getTokenFor(emailId: ei, password: pw)
+        if ei == "" || pw == ""{
+            self.presentAlert(title: "Alert!", alertMessage: "Please enter your id and password correctly")
+        }
+        else{
+            apiClient.getTokenFor(emailId: ei, password: pw)
+            showLoader()
+        }
     }
+    func checkIfLoggedIn(){
+        let defaults = UserDefaults.standard
+        self.token = defaults.string(forKey: "tokenKey")
+        if self.token != ""{
+            //Perform screen shift
+            DispatchQueue.main.async{
+                self.performSegue(withIdentifier: "loggedInSegue", sender: self)
+            }
+        }
+    }
+    
     //Delegate function called when login details are valid and login is successful
     func requestSuccessWithToken(token: String) {
+        hideLoader()
         //Save Token
+        let defaults = UserDefaults.standard
+        defaults.set(token, forKey: "tokenKey")
+        defaults.synchronize()
         //Update Token Variable
         self.token = token
         //Perform screen shift
@@ -64,9 +87,22 @@ class LoginViewController: UIViewController, APIClientDelegate {
     //Delegate function called when login is unsuccessful
     func requestFailed(errorMessage: String) {
         //Show error message on screen
+        hideLoader()
         self.presentAlert(title: "Error!", alertMessage: errorMessage)
         
     }
+    
+    func showLoader(){
+        DispatchQueue.main.async {
+            self.loaderView.isHidden = false
+        }
+    }
+    func hideLoader(){
+        DispatchQueue.main.async {
+            self.loaderView.isHidden = true
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loggedInSegue"{
             let dashboardVC = segue.destination as! DashboardViewController

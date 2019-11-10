@@ -59,7 +59,6 @@ class APIClient: NSObject, APIClientDelegate{
             let session = URLSession.shared
             let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
               if (error != nil) {
-                print(error)
                 self.delegate?.requestFailed?(errorMessage: "Please check your internet connection and retry")
               } else {
                 let httpResponse = response as? HTTPURLResponse
@@ -81,8 +80,7 @@ class APIClient: NSObject, APIClientDelegate{
                     }
                 }
                 else{
-                    print("login failed")
-                    self.delegate?.requestFailed?(errorMessage: "Login failed. Check credentials and retry.")
+                    self.delegate?.requestFailed?(errorMessage: "Login failed. Please check your credentials and retry.")
                 }
               }
             })

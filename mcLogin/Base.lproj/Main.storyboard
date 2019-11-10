@@ -20,13 +20,13 @@
                                 <rect key="frame" x="50" y="74" width="314" height="758"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-qb-CLs">
-                                        <rect key="frame" x="17" y="8" width="280" height="130"/>
+                                        <rect key="frame" x="17" y="8" width="280" height="115"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="KCO-Q2-vtF"/>
+                                            <constraint firstAttribute="height" constant="115" id="KCO-Q2-vtF"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="McKinley &amp; Rice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-Qh-wYl">
-                                        <rect key="frame" x="20" y="173" width="274" height="39.5"/>
+                                        <rect key="frame" x="20" y="158" width="274" height="39.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" red="1" green="0.054901960780000002" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -97,15 +97,46 @@
                                             <constraint firstItem="tYk-cs-TZB" firstAttribute="top" secondItem="XaF-Oo-zfk" secondAttribute="bottom" constant="8" id="q4a-Id-2oD"/>
                                         </constraints>
                                     </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNp-KU-x7h">
+                                        <rect key="frame" x="82" y="304" width="150" height="150"/>
+                                        <subviews>
+                                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-0J-t8y">
+                                                <rect key="frame" x="56.5" y="39" width="37" height="37"/>
+                                            </activityIndicatorView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please wait..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bKh-Ty-tZb">
+                                                <rect key="frame" x="18" y="91" width="114.5" height="24"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" name="Form Field Background"/>
+                                        <constraints>
+                                            <constraint firstItem="bKh-Ty-tZb" firstAttribute="top" secondItem="ej9-0J-t8y" secondAttribute="bottom" constant="15" id="Eh9-kk-tcO"/>
+                                            <constraint firstAttribute="width" constant="150" id="Oyy-U9-QyO"/>
+                                            <constraint firstItem="ej9-0J-t8y" firstAttribute="centerX" secondItem="BNp-KU-x7h" secondAttribute="centerX" id="Yj6-eF-5kf"/>
+                                            <constraint firstItem="bKh-Ty-tZb" firstAttribute="centerX" secondItem="BNp-KU-x7h" secondAttribute="centerX" id="c5P-IB-RvE"/>
+                                            <constraint firstAttribute="bottom" secondItem="bKh-Ty-tZb" secondAttribute="bottom" constant="35" id="hbY-50-HrI"/>
+                                            <constraint firstAttribute="height" constant="150" id="vkf-EO-NOQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstItem="BNp-KU-x7h" firstAttribute="centerX" secondItem="vkg-lh-vCq" secondAttribute="centerX" id="Abu-W6-JKE"/>
                                     <constraint firstAttribute="trailing" secondItem="q3Y-Vs-qpI" secondAttribute="trailing" constant="17" id="BtM-ft-Tiu"/>
                                     <constraint firstAttribute="trailing" secondItem="YKk-Qh-wYl" secondAttribute="trailing" constant="20" id="FJF-FQ-Jju"/>
                                     <constraint firstItem="u7Q-qb-CLs" firstAttribute="leading" secondItem="vkg-lh-vCq" secondAttribute="leading" constant="17" id="PEu-Qr-WWh"/>
                                     <constraint firstAttribute="bottom" secondItem="q3Y-Vs-qpI" secondAttribute="bottom" constant="45" id="PgO-Cg-hTa" customClass="KeyboardLayoutConstraint" customModule="mcLogin" customModuleProvider="target"/>
                                     <constraint firstItem="u7Q-qb-CLs" firstAttribute="top" secondItem="vkg-lh-vCq" secondAttribute="top" constant="8" id="efy-ww-yc2"/>
                                     <constraint firstItem="YKk-Qh-wYl" firstAttribute="centerX" secondItem="vkg-lh-vCq" secondAttribute="centerX" id="fzi-xd-esQ"/>
+                                    <constraint firstItem="BNp-KU-x7h" firstAttribute="centerY" secondItem="vkg-lh-vCq" secondAttribute="centerY" id="lKV-Yw-afV"/>
                                     <constraint firstItem="q3Y-Vs-qpI" firstAttribute="leading" secondItem="vkg-lh-vCq" secondAttribute="leading" constant="17" id="nNZ-qS-gxX"/>
                                     <constraint firstItem="YKk-Qh-wYl" firstAttribute="top" secondItem="u7Q-qb-CLs" secondAttribute="bottom" constant="35" id="not-RV-vqg"/>
                                     <constraint firstAttribute="trailing" secondItem="u7Q-qb-CLs" secondAttribute="trailing" constant="17" id="pqO-7Y-c6y"/>
@@ -129,6 +160,7 @@
                     <connections>
                         <outlet property="baseView" destination="vkg-lh-vCq" id="QL9-xY-c63"/>
                         <outlet property="emailInput" destination="tYk-cs-TZB" id="JqW-Ql-Kit"/>
+                        <outlet property="loaderView" destination="BNp-KU-x7h" id="avc-aC-gcB"/>
                         <outlet property="loginFormContainer" destination="q3Y-Vs-qpI" id="8ip-Xa-Vpo"/>
                         <outlet property="passwordInput" destination="2j3-sp-QpQ" id="NrW-8t-tn1"/>
                         <outlet property="passwordLabel" destination="UnX-fX-Tzn" id="x6E-9y-rf2"/>
@@ -167,7 +199,11 @@
                         <viewLayoutGuide key="safeArea" id="wN7-L5-P1W"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="nZO-TN-0Lv">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="uuf-62-fhb"/>
+                        <barButtonItem key="leftBarButtonItem" title="logout" id="CX2-jl-fOi">
+                            <connections>
+                                <action selector="logoutAction:" destination="KOV-hz-9YI" id="TXn-8k-zDa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
@@ -199,7 +235,6 @@
     </scenes>
     <resources>
         <image name="Logo" width="200" height="200"/>
-        <image name="pencil" catalog="system" width="64" height="56"/>
         <namedColor name="Dark Grey Text">
             <color red="0.80800002813339233" green="0.80800002813339233" blue="0.80800002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

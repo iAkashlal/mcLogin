@@ -19,9 +19,19 @@ class DashboardViewController: UIViewController {
         let url = URL(string: urlStr)!
         webView.load(URLRequest(url: url))
         webView.allowsBackForwardNavigationGestures = true
-        // Do any additional setup after loading the view.
+        webView.scrollView.bounces = false
     }
 
-
+    @IBAction func logoutAction(_ sender: Any) {
+        //resetToken
+        let defaults = UserDefaults.standard
+        defaults.set("", forKey: "tokenKey")
+        defaults.synchronize()
+        //Pop VC
+        DispatchQueue.main.async {
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
 }
 
