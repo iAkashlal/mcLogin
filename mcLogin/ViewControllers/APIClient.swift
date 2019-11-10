@@ -63,10 +63,22 @@ class APIClient: NSObject, APIClientDelegate{
                 self.delegate?.requestFailed?(errorMessage: "Please check your internet connection and retry")
               } else {
                 let httpResponse = response as? HTTPURLResponse
-                print(httpResponse)
                 if httpResponse?.statusCode == 200{
-                    print("success")
-                    self.delegate?.requestSuccessWithToken?(token: "something")
+                    if let responseData = data{
+                        let decoder = JSONDecoder()
+                        do {
+                            let getData = try decoder.decode(ResponseTokenData.self, from: responseData)
+                            if let token = getData.token{
+                                self.delegate?.requestSuccessWithToken?(token: token)
+                            }
+                            else{
+                                self.delegate?.requestFailed?(errorMessage: "Server didn't respond with a token. Please try again later")
+                            }
+                        } catch {
+                            self.delegate?.requestFailed?(errorMessage: "Some error occured, please retry")
+                        }
+                        
+                    }
                 }
                 else{
                     print("login failed")

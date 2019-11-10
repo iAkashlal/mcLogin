@@ -11,7 +11,7 @@
         <!--Login View Controller-->
         <scene sceneID="3GF-R6-GIn">
             <objects>
-                <viewController id="UfE-EE-8jV" customClass="LoginViewController" customModule="PingAR" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="UfE-EE-8jV" customClass="LoginViewController" customModule="mcLogin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gpP-yC-iEY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,13 +20,13 @@
                                 <rect key="frame" x="50" y="74" width="314" height="758"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="u7Q-qb-CLs">
-                                        <rect key="frame" x="17" y="8" width="280" height="200"/>
+                                        <rect key="frame" x="17" y="8" width="280" height="130"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="KCO-Q2-vtF"/>
+                                            <constraint firstAttribute="height" constant="130" id="KCO-Q2-vtF"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="McKinley &amp; Rice" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YKk-Qh-wYl">
-                                        <rect key="frame" x="20" y="243" width="274" height="39.5"/>
+                                        <rect key="frame" x="20" y="173" width="274" height="39.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                         <color key="textColor" red="1" green="0.054901960780000002" blue="0.30196078430000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -103,7 +103,7 @@
                                     <constraint firstAttribute="trailing" secondItem="q3Y-Vs-qpI" secondAttribute="trailing" constant="17" id="BtM-ft-Tiu"/>
                                     <constraint firstAttribute="trailing" secondItem="YKk-Qh-wYl" secondAttribute="trailing" constant="20" id="FJF-FQ-Jju"/>
                                     <constraint firstItem="u7Q-qb-CLs" firstAttribute="leading" secondItem="vkg-lh-vCq" secondAttribute="leading" constant="17" id="PEu-Qr-WWh"/>
-                                    <constraint firstAttribute="bottom" secondItem="q3Y-Vs-qpI" secondAttribute="bottom" constant="45" id="PgO-Cg-hTa" customClass="KeyboardLayoutConstraint" customModule="PingAR" customModuleProvider="target"/>
+                                    <constraint firstAttribute="bottom" secondItem="q3Y-Vs-qpI" secondAttribute="bottom" constant="45" id="PgO-Cg-hTa" customClass="KeyboardLayoutConstraint" customModule="mcLogin" customModuleProvider="target"/>
                                     <constraint firstItem="u7Q-qb-CLs" firstAttribute="top" secondItem="vkg-lh-vCq" secondAttribute="top" constant="8" id="efy-ww-yc2"/>
                                     <constraint firstItem="YKk-Qh-wYl" firstAttribute="centerX" secondItem="vkg-lh-vCq" secondAttribute="centerX" id="fzi-xd-esQ"/>
                                     <constraint firstItem="q3Y-Vs-qpI" firstAttribute="leading" secondItem="vkg-lh-vCq" secondAttribute="leading" constant="17" id="nNZ-qS-gxX"/>

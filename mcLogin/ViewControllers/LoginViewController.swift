@@ -48,7 +48,6 @@ class LoginViewController: UIViewController, APIClientDelegate {
         hideNavigationBar()
     }
     @IBAction func loginAction(_ sender: Any) {
-        self.token = "abcdef"
         guard let ei = emailInput.text, let pw = passwordInput.text else {return}
         apiClient.getTokenFor(emailId: ei, password: pw)
     }
@@ -56,6 +55,7 @@ class LoginViewController: UIViewController, APIClientDelegate {
     func requestSuccessWithToken(token: String) {
         //Save Token
         //Update Token Variable
+        self.token = token
         //Perform screen shift
         DispatchQueue.main.async{
             self.performSegue(withIdentifier: "loggedInSegue", sender: self)
