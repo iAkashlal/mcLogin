@@ -18,16 +18,10 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
     
+    var token:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        view.backgroundColor = UIColor.backgroundColor1
-//        emailInput.backgroundColor = UIColor.textFieldColor
-//        passwordInput.backgroundColor = UIColor.textFieldColor
-//        usernameLabel.textColor = UIColor.basicTextColor
-//        passwordLabel.textColor = UIColor.basicTextColor
-//        emailInput.textColor = UIColor.basicTextColor
-//        passwordInput.textColor = UIColor.basicTextColor
-        //Initialize
         setupHideKeyboardOnTap()
         
         // Do any additional setup after loading the view, typically from a nib.
@@ -40,14 +34,6 @@ class LoginViewController: UIViewController {
             //Displaying Login buttons
             UIView.animate(withDuration: 0.5, animations: {
                 self.loginFormContainer.alpha = 1
-//                self.emailInput.layer.cornerRadius = self.emailInput.frame.size.height/2
-//                self.emailInput.clipsToBounds = true
-//                self.emailInput.layer.borderWidth = 1.0
-//                self.emailInput.layer.borderColor = UIColor.lightGray.cgColor
-//                self.passwordInput.layer.cornerRadius = self.emailInput.frame.size.height/2
-//                self.passwordInput.clipsToBounds = true
-//                self.passwordInput.layer.borderWidth = 1.0
-//                self.passwordInput.layer.borderColor = UIColor.lightGray.cgColor
             })
         }
     }
@@ -59,6 +45,19 @@ class LoginViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         hideNavigationBar()
+    }
+    @IBAction func loginAction(_ sender: Any) {
+        self.token = "abcdef"
+        performSegue(withIdentifier: "loggedInSegue", sender: self)
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "loggedInSegue"{
+            let dashboardVC = segue.destination as! DashboardViewController
+            //If a token was successfully obtained, it opens https://mckinleyrice.com?token=obtainedToken, else opens google.com (since variable default value is google.com in next screen)
+            if let token = token{
+                dashboardVC.urlStr = "https://mckinleyrice.com?token=\(token)"
+            }
+        }
     }
 }
 

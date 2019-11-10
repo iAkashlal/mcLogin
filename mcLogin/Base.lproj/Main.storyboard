@@ -75,7 +75,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
-                                                    <segue destination="KOV-hz-9YI" kind="show" id="Jnq-cV-tZw"/>
+                                                    <action selector="loginAction:" destination="UfE-EE-8jV" eventType="touchUpInside" id="8ot-ja-38j"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -133,6 +133,7 @@
                         <outlet property="passwordInput" destination="2j3-sp-QpQ" id="NrW-8t-tn1"/>
                         <outlet property="passwordLabel" destination="UnX-fX-Tzn" id="x6E-9y-rf2"/>
                         <outlet property="usernameLabel" destination="XaF-Oo-zfk" id="pmW-54-xmi"/>
+                        <segue destination="KOV-hz-9YI" kind="show" identifier="loggedInSegue" id="Gcu-9c-TXA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Knk-1J-ZvB" sceneMemberID="firstResponder"/>
