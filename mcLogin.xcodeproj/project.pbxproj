@@ -17,7 +17,8 @@
 		76FA49DF2377E9190035D6E2 /* mcLoginUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49DE2377E9190035D6E2 /* mcLoginUITests.swift */; };
 		76FA49ED2377F36F0035D6E2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */; };
 		76FA49F22377F43F0035D6E2 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */; };
-		76FA49F42377F4470035D6E2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49F32377F4470035D6E2 /* Utility.swift */; };
+		76FA49FA237802F20035D6E2 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49F9237802F20035D6E2 /* APIClient.swift */; };
+		76FA49FC237807490035D6E2 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FA49FB237807490035D6E2 /* Utility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +55,8 @@
 		76FA49E02377E9190035D6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
-		76FA49F32377F4470035D6E2 /* Utility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		76FA49F9237802F20035D6E2 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		76FA49FB237807490035D6E2 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 			children = (
 				76FA49EC2377F36F0035D6E2 /* LoginViewController.swift */,
 				76FA49C02377E9150035D6E2 /* DashboardViewController.swift */,
+				76FA49F9237802F20035D6E2 /* APIClient.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -147,8 +150,8 @@
 		76FA49F52377F4500035D6E2 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				76FA49F32377F4470035D6E2 /* Utility.swift */,
 				76FA49F12377F43F0035D6E2 /* KeyboardLayoutConstraint.swift */,
+				76FA49FB237807490035D6E2 /* Utility.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -284,9 +287,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76FA49FC237807490035D6E2 /* Utility.swift in Sources */,
 				76FA49ED2377F36F0035D6E2 /* LoginViewController.swift in Sources */,
+				76FA49FA237802F20035D6E2 /* APIClient.swift in Sources */,
 				76FA49C12377E9150035D6E2 /* DashboardViewController.swift in Sources */,
-				76FA49F42377F4470035D6E2 /* Utility.swift in Sources */,
 				76FA49BD2377E9150035D6E2 /* AppDelegate.swift in Sources */,
 				76FA49F22377F43F0035D6E2 /* KeyboardLayoutConstraint.swift in Sources */,
 				76FA49BF2377E9150035D6E2 /* SceneDelegate.swift in Sources */,

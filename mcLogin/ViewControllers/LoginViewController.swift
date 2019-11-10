@@ -1,14 +1,14 @@
 //
 //  ViewController.swift
-//  PingAR
+//  AKASHLAL.COM
 //
-//  Created by Akashlal on 28/09/19.
+//  Created by Akashlal on 10/11/19.
 //  Copyright © 2019 Akashlal. All rights reserved.
 //
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, APIClientDelegate {
     @IBOutlet weak var baseView: UIView!
     @IBOutlet weak var loginFormContainer: UIView!
     
@@ -19,11 +19,12 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordLabel: UILabel!
     
     var token:String?
+    let apiClient = APIClient()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupHideKeyboardOnTap()
-        
+        apiClient.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
         self.loginFormContainer.alpha = 0
         self.baseView.frame = CGRect(x: UIScreen.main.bounds.width - self.baseView.bounds.width , y: self.view.frame.size.height/3.2, width: self.baseView.frame.size.width, height: self.baseView.frame.size.height) 
@@ -48,7 +49,23 @@ class LoginViewController: UIViewController {
     }
     @IBAction func loginAction(_ sender: Any) {
         self.token = "abcdef"
-        performSegue(withIdentifier: "loggedInSegue", sender: self)
+        guard let ei = emailInput.text, let pw = passwordInput.text else {return}
+        apiClient.getTokenFor(emailId: ei, password: pw)
+    }
+    //Delegate function called when login details are valid and login is successful
+    func requestSuccessWithToken(token: String) {
+        //Save Token
+        //Update Token Variable
+        //Perform screen shift
+        DispatchQueue.main.async{
+            self.performSegue(withIdentifier: "loggedInSegue", sender: self)
+        }
+    }
+    //Delegate function called when login is unsuccessful
+    func requestFailed(errorMessage: String) {
+        //Show error message on screen
+        self.presentAlert(title: "Error!", alertMessage: errorMessage)
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "loggedInSegue"{

@@ -40,7 +40,7 @@
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-cs-TZB">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="eve.holt@reqres.in" borderStyle="roundedRect" placeholder="user@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-cs-TZB">
                                                 <rect key="frame" x="0.0" y="21" width="280" height="34"/>
                                                 <color key="backgroundColor" name="Form Field Background"/>
                                                 <color key="textColor" name="Dark Grey Text"/>
@@ -53,7 +53,7 @@
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2j3-sp-QpQ" userLabel="password">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cityslicka" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2j3-sp-QpQ" userLabel="password">
                                                 <rect key="frame" x="0.0" y="104" width="280" height="34"/>
                                                 <color key="backgroundColor" name="Form Field Background"/>
                                                 <color key="textColor" name="Dark Grey Text"/>

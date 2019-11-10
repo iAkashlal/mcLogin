@@ -1,8 +1,8 @@
 //
 //  Utility.swift
-//  PingAR
+//  AKASHLAL.COM
 //
-//  Created by Akashlal Bathe on 07/10/19.
+//  Created by Akashlal Bathe on 10/11/19.
 //  Copyright © 2019 Akashlal. All rights reserved.
 //
 
@@ -10,6 +10,16 @@ import Foundation
 import UIKit
 
 extension UIViewController{
+    
+    //Generic function to show alert takign in title and message
+    func presentAlert(title:String, alertMessage: String){
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: title, message: alertMessage, preferredStyle: .alert)
+            alertController.view.tintColor = UIColor.init(named: "TintColor")
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: .cancel))
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
     
     //To hide Navigation bar now and in subsequent screens
     func hideNavigationBar(){
