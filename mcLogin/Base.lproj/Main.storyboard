@@ -146,13 +146,32 @@
                     <view key="view" contentMode="scaleToFill" id="m8d-mW-fwE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AJ8-dU-22I">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AJ8-dU-22I" firstAttribute="top" secondItem="wN7-L5-P1W" secondAttribute="top" id="Fy6-Eq-BXm"/>
+                            <constraint firstItem="wN7-L5-P1W" firstAttribute="bottom" secondItem="AJ8-dU-22I" secondAttribute="bottom" id="WeP-xS-CY7"/>
+                            <constraint firstItem="wN7-L5-P1W" firstAttribute="trailing" secondItem="AJ8-dU-22I" secondAttribute="trailing" id="WlI-65-IR2"/>
+                            <constraint firstItem="AJ8-dU-22I" firstAttribute="leading" secondItem="wN7-L5-P1W" secondAttribute="leading" id="yW5-Ob-FEb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="wN7-L5-P1W"/>
                     </view>
                     <navigationItem key="navigationItem" title="Dashboard" id="nZO-TN-0Lv">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="pencil" catalog="system" id="uuf-62-fhb"/>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <connections>
+                        <outlet property="webView" destination="AJ8-dU-22I" id="9fj-Q5-xua"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kVP-37-J9D" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
