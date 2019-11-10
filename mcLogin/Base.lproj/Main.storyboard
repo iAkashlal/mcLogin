@@ -35,36 +35,36 @@
                                         <rect key="frame" x="17" y="515" width="280" height="198"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ID (Email):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaF-Oo-zfk">
-                                                <rect key="frame" x="0.0" y="-8" width="79" height="21"/>
+                                                <rect key="frame" x="0.0" y="-18" width="79" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="eve.holt@reqres.in" borderStyle="roundedRect" placeholder="user@email.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tYk-cs-TZB">
-                                                <rect key="frame" x="0.0" y="21" width="280" height="34"/>
+                                                <rect key="frame" x="0.0" y="11" width="280" height="34"/>
                                                 <color key="backgroundColor" name="Form Field Background"/>
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UnX-fX-Tzn" userLabel="Password label">
-                                                <rect key="frame" x="0.0" y="75" width="74" height="21"/>
+                                                <rect key="frame" x="0.0" y="65" width="74" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="cityslicka" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2j3-sp-QpQ" userLabel="password">
-                                                <rect key="frame" x="0.0" y="104" width="280" height="34"/>
+                                                <rect key="frame" x="0.0" y="94" width="280" height="34"/>
                                                 <color key="backgroundColor" name="Form Field Background"/>
                                                 <color key="textColor" name="Dark Grey Text"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v6o-eW-4vF">
-                                                <rect key="frame" x="0.0" y="163" width="280" height="35"/>
+                                                <rect key="frame" x="0.0" y="153" width="280" height="45"/>
                                                 <color key="backgroundColor" red="0.22352941176470587" green="0.76862745098039209" blue="0.61568627450980395" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="35" id="fTq-Zg-rCn"/>
+                                                    <constraint firstAttribute="height" constant="45" id="fTq-Zg-rCn"/>
                                                 </constraints>
                                                 <state key="normal" title="Login">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,7 +97,7 @@
                                             <constraint firstItem="tYk-cs-TZB" firstAttribute="top" secondItem="XaF-Oo-zfk" secondAttribute="bottom" constant="8" id="q4a-Id-2oD"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNp-KU-x7h">
+                                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BNp-KU-x7h">
                                         <rect key="frame" x="82" y="304" width="150" height="150"/>
                                         <subviews>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ej9-0J-t8y">

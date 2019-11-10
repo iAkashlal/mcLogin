@@ -36,6 +36,7 @@ class LoginViewController: UIViewController, APIClientDelegate {
             //Displaying Login buttons
             UIView.animate(withDuration: 0.5, animations: {
                 self.loginFormContainer.alpha = 1
+                self.loaderView.alpha = 1
             })
         }
     }
